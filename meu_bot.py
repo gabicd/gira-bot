@@ -12,8 +12,6 @@ API_HASH = os.environ.get('API_HASH')
 
 TARGET_CHAT = '@tricklandbot'
 
-SESSION_FILE = 'data/userbot_session'
-
 COMMAND_TO_SEND = "🎯 Mirar"  
 STOP_PHRASES = ["Oh, não! Você não possui mais dardos."]
 
@@ -38,7 +36,7 @@ TRIGGER_PHRASES = ["Escolha uma subcategoria:"]
 REFRESH_BUTTON_TEXT = "🔄"
 MAX_REFRESH_ATTEMPTS = 2
 
-client = TelegramClient(SESSION_FILE, API_ID, API_HASH)
+client = TelegramClient('userbot_session', API_ID, API_HASH)
 
 def parse_message_and_map_buttons(message):
 
